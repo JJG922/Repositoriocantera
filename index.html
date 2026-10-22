@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositorio Cantera - Logros y Trayectorias</title>
+    <style>
+        /* Estilos generales - Diseño Mobile-First */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        
+        /* Encabezado */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header h1 { margin: 0; font-size: 24px; }
+        header p { margin: 5px 0 0 0; font-size: 14px; opacity: 0.9; }
+
+        /* Contenedor principal */
+        .container {
+            padding: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Filtros (simulados visualmente) */
+        .filtros {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+        }
+        .filtro-btn {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #555;
+            white-space: nowrap;
+        }
+        .filtro-btn.activo {
+            background-color: #2a5298;
+            color: white;
+            border-color: #2a5298;
+        }
+
+        /* Tarjetas de logros */
+        .tarjeta {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .tarjeta img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .tarjeta-contenido {
+            padding: 15px;
+        }
+        .etiqueta {
+            background-color: #e1ecf4;
+            color: #1e3c72;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .tarjeta h2 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            color: #222;
+        }
+        .tarjeta p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .autor {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .btn-leer {
+            display: block;
+            text-align: center;
+            background-color: #1e3c72;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Repositorio Cantera</h1>
+        <p>Historias reales que inspiran</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- Botones de categorías -->
+        <div class="filtros">
+            <div class="filtro-btn activo">Todos</div>
+            <div class="filtro-btn">Académico</div>
+            <div class="filtro-btn">Deportivo</div>
+            <div class="filtro-btn">Cultural</div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- TARJETA DE EJEMPLO 1 -->
+        <!-- ========================================== -->
+        <div class="tarjeta">
+            <!-- Reemplaza el link de la imagen por uno tuyo -->
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Estudiante">
+            <div class="tarjeta-contenido">
+                <span class="etiqueta">Académico</span>
+                <h2>El poder de la disciplina en mi proceso</h2>
+                <span class="autor">Por: Juan José | Año: 2024</span>
+                <p>No fue fácil, pero aprendí que la constancia y el esfuerzo diario son la clave para alcanzar lo que sueñas.</p>
+                <!-- Aquí a futuro puedes poner un link a una página con la historia completa -->
+                <a href="#" class="btn-leer">Leer historia completa</a>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- TARJETA DE EJEMPLO 2 (Puedes copiar y pegar este bloque para añadir más) -->
+        <!-- ========================================== -->
+        <div class="tarjeta">
+            <img src="https://images.unsplash.com/photo-1519766304817-4f37bda74a26?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Deportista">
+            <div class="tarjeta-contenido">
+                <span class="etiqueta" style="background-color: #e6f4ea; color: #1e8e3e;">Deportivo</span>
+                <h2>Cómo el fútbol me enseñó a ser mejor persona</h2>
+                <span class="autor">Por: María Camila | Año: 2023</span>
+                <p>El deporte no solo me dio salud, me enseñó el valor del trabajo en equipo y a nunca rendirme ante las adversidades.</p>
+                <a href="#" class="btn-leer">Leer historia completa</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+  </html>
