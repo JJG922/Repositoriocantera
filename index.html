@@ -3,157 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Repositorio Cantera - Logros y Trayectorias</title>
+    <title>I.E. Enrique Olaya Herrera - Repositorio</title>
     <style>
-        /* Estilos generales - Diseño Mobile-First */
+        /* --- ESTILOS GENERALES (Adaptado a celular) --- */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f7f6;
+            background-color: #f8f9fa; /* Fondo gris muy claro */
             color: #333;
         }
-        
-        /* Encabezado */
-        header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        header h1 { margin: 0; font-size: 24px; }
-        header p { margin: 5px 0 0 0; font-size: 14px; opacity: 0.9; }
 
-        /* Contenedor principal */
+        /* --- HEADER (El diseño oscuro con foto que elegiste) --- */
+        header {
+            /* Foto de fondo de montaña/atardecer similar a tu diseño */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 40px 20px;
+            text-align: left;
+        }
+        header .institucion {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #f1c40f; /* Color dorado/amarillo para resaltar */
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            font-family: 'Georgia', serif; /* Letra elegante para el título */
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+        header p {
+            font-size: 15px;
+            margin: 0;
+            opacity: 0.9;
+            max-width: 500px;
+            line-height: 1.4;
+        }
+
+        /* --- CONTENEDOR PRINCIPAL --- */
         .container {
-            padding: 15px;
+            padding: 20px;
             max-width: 600px;
             margin: 0 auto;
         }
 
-        /* Filtros (simulados visualmente) */
+        /* --- BUSCADOR --- */
+        .buscador {
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 25px;
+            border: 1px solid #ddd;
+            font-size: 15px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        /* --- FILTROS DE CATEGORÍAS --- */
         .filtros {
             display: flex;
             gap: 10px;
             overflow-x: auto;
-            padding-bottom: 15px;
-            margin-bottom: 10px;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
         }
         .filtro-btn {
             background-color: white;
-            border: 1px solid #ddd;
-            padding: 8px 15px;
+            border: 1px solid #ccc;
+            padding: 8px 16px;
             border-radius: 20px;
             font-size: 14px;
             color: #555;
             white-space: nowrap;
+            font-weight: 500;
         }
         .filtro-btn.activo {
-            background-color: #2a5298;
+            background-color: #1e3c72; /* Azul oscuro */
             color: white;
-            border-color: #2a5298;
+            border-color: #1e3c72;
         }
 
-        /* Tarjetas de logros */
+        /* --- TARJETAS DEL REPOSITORIO --- */
         .tarjeta {
             background-color: white;
-            border-radius: 12px;
+            border-radius: 15px;
             overflow: hidden;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border: 1px solid #eee;
         }
         .tarjeta img {
             width: 100%;
-            height: 180px;
+            height: 200px;
             object-fit: cover;
         }
         .tarjeta-contenido {
-            padding: 15px;
+            padding: 20px;
         }
         .etiqueta {
             background-color: #e1ecf4;
             color: #1e3c72;
             font-size: 12px;
             font-weight: bold;
-            padding: 4px 8px;
-            border-radius: 4px;
+            padding: 5px 10px;
+            border-radius: 5px;
             display: inline-block;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
         .tarjeta h2 {
             margin: 0 0 10px 0;
-            font-size: 18px;
+            font-size: 20px;
             color: #222;
-        }
-        .tarjeta p {
-            font-size: 14px;
-            line-height: 1.5;
-            color: #666;
-            margin-bottom: 15px;
+            line-height: 1.3;
         }
         .autor {
-            font-size: 12px;
-            color: #999;
+            font-size: 13px;
+            color: #888;
             margin-bottom: 15px;
             display: block;
+        }
+        .tarjeta p {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #555;
+            margin-bottom: 20px;
         }
         .btn-leer {
             display: block;
             text-align: center;
-            background-color: #1e3c72;
-            color: white;
+            background-color: #f8f9fa;
+            color: #1e3c72;
             text-decoration: none;
-            padding: 10px;
+            padding: 12px;
             border-radius: 8px;
             font-weight: bold;
-            font-size: 14px;
+            font-size: 15px;
+            border: 1px solid #1e3c72;
         }
     </style>
 </head>
 <body>
 
+    <!-- EL HEADER OSCURO CON FOTO -->
     <header>
-        <h1>Repositorio Cantera</h1>
-        <p>Historias reales que inspiran</p>
+        <div class="institucion">I.E. Enrique Olaya Herrera</div>
+        <h1>Comprometidos con la ciencia, la cultura y los derechos humanos.</h1>
+        <p>Repositorio oficial de logros, trayectorias e historias que inspiran a nuestra comunidad.</p>
     </header>
 
     <div class="container">
         
-        <!-- Botones de categorías -->
+        <!-- BARRA DE BÚSQUEDA -->
+        <input type="text" class="buscador" placeholder="🔍 Buscar historias, personas o temas...">
+
+        <!-- FILTROS -->
         <div class="filtros">
             <div class="filtro-btn activo">Todos</div>
-            <div class="filtro-btn">Académico</div>
-            <div class="filtro-btn">Deportivo</div>
-            <div class="filtro-btn">Cultural</div>
+            <div class="filtro-btn">Ciencia</div>
+            <div class="filtro-btn">Cultura</div>
+            <div class="filtro-btn">Derechos Humanos</div>
         </div>
 
-        <!-- ========================================== -->
-        <!-- TARJETA DE EJEMPLO 1 -->
-        <!-- ========================================== -->
+        <!-- TARJETA DE EJEMPLO (Puedes copiar y pegar este bloque para añadir más) -->
         <div class="tarjeta">
-            <!-- Reemplaza el link de la imagen por uno tuyo -->
-            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Estudiante">
+            <!-- Foto de ejemplo -->
+            <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ciencia">
             <div class="tarjeta-contenido">
-                <span class="etiqueta">Académico</span>
-                <h2>El poder de la disciplina en mi proceso</h2>
-                <span class="autor">Por: Juan José | Año: 2024</span>
-                <p>No fue fácil, pero aprendí que la constancia y el esfuerzo diario son la clave para alcanzar lo que sueñas.</p>
-                <!-- Aquí a futuro puedes poner un link a una página con la historia completa -->
+                <span class="etiqueta">Ciencia</span>
+                <h2>Feria de Innovación: Proyecto de energías limpias</h2>
+                <span class="autor">Por: Estudiante de Grado 11 | Año: 2024</span>
+                <p>Nuestros estudiantes destacaron en la feria regional con un prototipo de panel solar casero, demostrando que la ciencia está al alcance de todos para cuidar el planeta.</p>
                 <a href="#" class="btn-leer">Leer historia completa</a>
             </div>
         </div>
 
-        <!-- ========================================== -->
-        <!-- TARJETA DE EJEMPLO 2 (Puedes copiar y pegar este bloque para añadir más) -->
-        <!-- ========================================== -->
+        <!-- TARJETA DE EJEMPLO 2 -->
         <div class="tarjeta">
-            <img src="https://images.unsplash.com/photo-1519766304817-4f37bda74a26?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Deportista">
+            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cultura">
             <div class="tarjeta-contenido">
-                <span class="etiqueta" style="background-color: #e6f4ea; color: #1e8e3e;">Deportivo</span>
-                <h2>Cómo el fútbol me enseñó a ser mejor persona</h2>
-                <span class="autor">Por: María Camila | Año: 2023</span>
-                <p>El deporte no solo me dio salud, me enseñó el valor del trabajo en equipo y a nunca rendirme ante las adversidades.</p>
+                <span class="etiqueta" style="background-color: #fce8e6; color: #c5221f;">Cultura</span>
+                <h2>Festival de Talentos Olayistas</h2>
+                <span class="autor">Por: Semillero de Música | Año: 2023</span>
+                <p>Un espacio donde la música, el teatro y la danza se tomaron la institución, demostrando que la cultura es el motor para la sana convivencia y la expresión de nuestros jóvenes.</p>
                 <a href="#" class="btn-leer">Leer historia completa</a>
             </div>
         </div>
@@ -161,4 +199,4 @@
     </div>
 
 </body>
-  </html>
+</html>
