@@ -5,177 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Repositorio - I.E. Enrique Olaya Herrera</title>
     <style>
-        /* --- ESTILOS GENERALES --- */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f6f9; /* Fondo gris académico */
-            color: #333;
-        }
-
-        /* --- HEADER (Portada Institucional) --- */
-        header {
-            background: linear-gradient(rgba(30, 60, 114, 0.85), rgba(30, 60, 114, 0.95)), url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-            border-bottom: 5px solid #f1c40f; /* Línea dorada institucional */
-        }
-        header h1 {
-            margin: 0 0 10px 0;
-            font-size: 28px;
-            font-family: 'Georgia', serif;
-            line-height: 1.2;
-        }
-        header p {
-            font-size: 16px;
-            margin: 0;
-            opacity: 0.9;
-            font-weight: 300;
-        }
-
-        /* --- CONTENEDOR --- */
-        .container {
-            padding: 20px;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* --- BUSCADOR --- */
-        .buscador {
-            width: 100%;
-            padding: 15px 20px;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            font-size: 16px;
-            box-sizing: border-box;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        /* --- FILTROS (Categorías solicitadas) --- */
-        .filtros {
-            display: flex;
-            gap: 10px;
-            overflow-x: auto;
-            padding-bottom: 15px;
-            margin-bottom: 15px;
-            /* Oculta la barra de scroll en celular */
-            scrollbar-width: none; 
-        }
-        .filtros::-webkit-scrollbar { display: none; }
-        
-        .filtro-btn {
-            background-color: white;
-            border: 1px solid #ccc;
-            padding: 10px 18px;
-            border-radius: 30px;
-            font-size: 14px;
-            color: #555;
-            white-space: nowrap;
-            font-weight: 600;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
-        }
-        .filtro-btn.activo {
-            background-color: #1e3c72;
-            color: white;
-            border-color: #1e3c72;
-        }
-
-        /* --- TARJETAS DE PUBLICACIÓN --- */
-        .tarjeta {
-            background-color: white;
-            border-radius: 12px;
-            overflow: hidden;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            display: flex;
-            flex-direction: column;
-        }
-        
-        /* Imagen de la tarjeta */
-        .tarjeta img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .tarjeta-contenido {
-            padding: 20px;
-        }
-
-        /* Etiquetas de colores por categoría */
-        .etiqueta {
-            font-size: 11px;
-            font-weight: 800;
-            padding: 6px 12px;
-            border-radius: 4px;
-            display: inline-block;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .tag-educacion { background-color: #e3f2fd; color: #1565c0; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background-color: #f4f6f9; color: #333; }
+        header { background: linear-gradient(rgba(30, 60, 114, 0.85), rgba(30, 60, 114, 0.95)), url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'); background-size: cover; background-position: center; color: white; padding: 50px 20px; text-align: center; border-bottom: 5px solid #f1c40f; }
+        header h1 { margin: 0 0 10px 0; font-size: 28px; font-family: 'Georgia', serif; line-height: 1.2; }
+        header p { font-size: 16px; margin: 0; opacity: 0.9; font-weight: 300; }
+        .container { padding: 20px; max-width: 700px; margin: 0 auto; }
+        .buscador { width: 100%; padding: 15px 20px; border-radius: 8px; border: 1px solid #ddd; font-size: 16px; box-sizing: border-box; margin-bottom: 20px; }
+        .filtros { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 15px; margin-bottom: 15px; }
+        .filtro-btn { background-color: white; border: 1px solid #ccc; padding: 10px 18px; border-radius: 30px; font-size: 14px; color: #555; white-space: nowrap; font-weight: 600; }
+        .filtro-btn.activo { background-color: #1e3c72; color: white; border-color: #1e3c72; }
+        .tarjeta { background-color: white; border-radius: 12px; overflow: hidden; margin-bottom: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        .tarjeta img { width: 100%; height: 220px; object-fit: cover; border-bottom: 1px solid #eee; }
+        .tarjeta-contenido { padding: 20px; }
+        .etiqueta { font-size: 11px; font-weight: 800; padding: 6px 12px; border-radius: 4px; display: inline-block; margin-bottom: 12px; text-transform: uppercase; }
         .tag-ciudad { background-color: #e8f5e9; color: #2e7d32; }
-        .tag-juventud { background-color: #fff3e0; color: #e65100; }
         .tag-codigo { background-color: #f3e5f5; color: #6a1b9a; }
         .tag-ensayo { background-color: #ffebee; color: #c62828; }
-
-        /* Título de la publicación */
-        .tarjeta h2 {
-            margin: 0 0 10px 0;
-            font-size: 20px;
-            color: #111;
-            line-height: 1.3;
-            font-family: 'Georgia', serif;
-        }
-
-        /* Autor de la publicación */
-        .autor {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .autor img {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        /* Resumen */
-        .tarjeta p {
-            font-size: 15px;
-            line-height: 1.6;
-            color: #444;
-            margin-bottom: 20px;
-        }
-
-        /* Botón de descarga/lectura */
-        .btn-leer {
-            display: block;
-            text-align: center;
-            background-color: #1e3c72;
-            color: white;
-            text-decoration: none;
-            padding: 14px;
-            border-radius: 6px;
-            font-weight: bold;
-            font-size: 15px;
-            transition: background 0.3s;
-        }
+        .tarjeta h2 { margin: 0 0 10px 0; font-size: 20px; color: #111; line-height: 1.3; font-family: 'Georgia', serif; }
+        .autor { font-size: 14px; color: #666; margin-bottom: 15px; display: block; }
+        .tarjeta p { font-size: 15px; line-height: 1.6; color: #444; margin-bottom: 20px; }
+        .btn-leer { display: block; text-align: center; background-color: #1e3c72; color: white; text-decoration: none; padding: 14px; border-radius: 6px; font-weight: bold; font-size: 15px; }
     </style>
 </head>
 <body>
 
-    <!-- ENCABEZADO -->
     <header>
         <h1>Repositorio Académico<br>I.E. Enrique Olaya Herrera</h1>
         <p>Comprometidos con la ciencia, la cultura y los derechos humanos.</p>
@@ -183,10 +36,8 @@
 
     <div class="container">
         
-        <!-- BUSCADOR -->
         <input type="text" class="buscador" placeholder="🔍 Buscar por título, autor o palabra clave...">
 
-        <!-- FILTROS (Adaptados a los temas que mencionaste) -->
         <div class="filtros">
             <div class="filtro-btn activo">Todos</div>
             <div class="filtro-btn">Ensayos</div>
@@ -196,54 +47,39 @@
             <div class="filtro-btn">Código</div>
         </div>
 
-        <!-- ========================================== -->
-        <!-- TARJETA 1: EJEMPLO DE ENSAYO -->
-        <!-- ========================================== -->
+        <!-- TARJETA 1: ENSAYO -->
         <div class="tarjeta">
-            <img src="https://images.unsplash.com/photo-1455390582262-044cdead2708?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ensayo">
+            <img src="Ensayo.jpg" alt="Foro Educativo">
             <div class="tarjeta-contenido">
-                <span class="etiqueta tag-ensayo">Ensayo</span>
-                <h2>El papel de la escuela en la construcción de paz</h2>
-                <span class="autor">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Profesor">
-                    Prof. Carlos Mendoza | Marzo 2024
-                </span>
-                <p>Una reflexión profunda sobre cómo las aulas se convierten en el primer territorio de reconciliación y diálogo para los jóvenes de nuestra ciudad.</p>
+                <span class="etiqueta tag-ensayo">Ensayo / D.D.H.H.</span>
+                <h2>Foro Educativo: Empoderando tu voz joven</h2>
+                <span class="autor">I.E. Enrique Olaya Herrera | Octubre 2025</span>
+                <p>Un espacio de reflexión y diálogo donde los jóvenes asumen la dirección de su propio país. Contamos con el apoyo de Comfama, la Alcaldía y diversas fundaciones.</p>
                 <a href="#" class="btn-leer">📄 Leer Ensayo Completo</a>
             </div>
         </div>
 
-        <!-- ========================================== -->
-        <!-- TARJETA 2: EJEMPLO DE CÓDIGO O TECNOLOGÍA -->
-        <!-- ========================================== -->
+        <!-- TARJETA 2: CIUDAD -->
         <div class="tarjeta">
-            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Código">
+            <img src="Ciudad.jpg" alt="Expresión artística ciudad">
             <div class="tarjeta-contenido">
-                <span class="etiqueta tag-codigo">Código</span>
-                <h2>Introducción a la programación web para principiantes</h2>
-                <span class="autor">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Profesora">
-                    Prof. Laura Gómez | Febrero 2024
-                </span>
-                <p>Material de apoyo y guía práctica desarrollada para el semillero de tecnología, donde los estudiantes aprenden HTML y CSS desde cero.</p>
-                <a href="#" class="btn-leer">💻 Ver Publicación</a>
+                <span class="etiqueta tag-ciudad">Ciudad / Juventud</span>
+                <h2>El arte como herramienta de transformación social</h2>
+                <span class="autor">Estudiantes EOH | Noviembre 2023</span>
+                <p>Una muestra artística donde, a través del dibujo, se reflexiona sobre cómo la educación y el conocimiento rompen las cadenas y abren la mente de los ciudadanos.</p>
+                <a href="#" class="btn-leer">📸 Ver Publicación</a>
             </div>
         </div>
 
-        <!-- ========================================== -->
-        <!-- TARJETA 3: EJEMPLO DE FOTO / CIUDAD -->
-        <!-- ========================================== -->
+        <!-- TARJETA 3: CÓDIGO -->
         <div class="tarjeta">
-            <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ciudad">
+            <img src="Codigo.jpg" alt="Inteligencia Artificial">
             <div class="tarjeta-contenido">
-                <span class="etiqueta tag-ciudad">Ciudad</span>
-                <h2>Galería Fotográfica: Los rostros de nuestro barrio</h2>
-                <span class="autor">
-                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Profesor">
-                    Prof. Andrés Rivera | Noviembre 2023
-                </span>
-                <p>Un registro visual realizado por el área de sociales, documentando la historia, el comercio y las dinámicas de la comunidad que rodea al colegio.</p>
-                <a href="#" class="btn-leer">📸 Ver Galería</a>
+                <span class="etiqueta tag-codigo">Código / Tecnología</span>
+                <h2>¿La evolución eres tú o una máquina? (Inteligencia Artificial)</h2>
+                <span class="autor">Foro de Ciudad y D.D.H.H. | Octubre 2023</span>
+                <p>Análisis sobre el impacto de la IA en la sociedad actual. Una invitación a debatir sobre los límites éticos de la tecnología y el futuro de la humanidad.</p>
+                <a href="#" class="btn-leer">💻 Leer Investigación</a>
             </div>
         </div>
 
