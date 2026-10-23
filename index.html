@@ -6,9 +6,41 @@
     <title>Repositorio - I.E. Enrique Olaya Herrera</title>
     <style>
         body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background-color: #f4f6f9; color: #333; }
-        header { background: linear-gradient(rgba(30, 60, 114, 0.85), rgba(30, 60, 114, 0.95)), url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'); background-size: cover; background-position: center; color: white; padding: 50px 20px; text-align: center; border-bottom: 5px solid #f1c40f; }
-        header h1 { margin: 0 0 10px 0; font-size: 28px; font-family: 'Georgia', serif; line-height: 1.2; }
-        header p { font-size: 16px; margin: 0; opacity: 0.9; font-weight: 300; }
+        
+        /* --- HEADER CON LOGO --- */
+        header { 
+            background: linear-gradient(rgba(30, 60, 114, 0.85), rgba(30, 60, 114, 0.95)), url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'); 
+            background-size: cover; 
+            background-position: center; 
+            color: white; 
+            padding: 30px 20px; 
+            border-bottom: 5px solid #f1c40f; 
+        }
+        
+        .header-contenido {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 700px;
+            margin: 0 auto;
+            gap: 15px;
+            text-align: left;
+        }
+
+        .logo-escuela {
+            width: 85px; 
+            height: 85px;
+            background-color: white;
+            border-radius: 50%;
+            padding: 5px;
+            object-fit: contain;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .header-texto h1 { margin: 0 0 5px 0; font-size: 22px; font-family: 'Georgia', serif; line-height: 1.2; }
+        .header-texto p { font-size: 14px; margin: 0; opacity: 0.9; font-weight: 300; }
+
+        /* --- RESTO DE ESTILOS --- */
         .container { padding: 20px; max-width: 700px; margin: 0 auto; }
         .buscador { width: 100%; padding: 15px 20px; border-radius: 8px; border: 1px solid #ddd; font-size: 16px; box-sizing: border-box; margin-bottom: 20px; }
         .filtros { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 15px; margin-bottom: 15px; }
@@ -29,9 +61,17 @@
 </head>
 <body>
 
+    <!-- HEADER CON LOGO -->
     <header>
-        <h1>Repositorio Académico<br>I.E. Enrique Olaya Herrera</h1>
-        <p>Comprometidos con la ciencia, la cultura y los derechos humanos.</p>
+        <div class="header-contenido">
+            <!-- CAMBIA ".png" POR ".jpg" SI TU ARCHIVO TERMINA EN JPG -->
+            <img src="Logo.png" alt="Escudo EOH" class="logo-escuela">
+            
+            <div class="header-texto">
+                <h1>Repositorio Académico<br>I.E. Enrique Olaya Herrera</h1>
+                <p>Comprometidos con la ciencia, la cultura y los derechos humanos.</p>
+            </div>
+        </div>
     </header>
 
     <div class="container">
