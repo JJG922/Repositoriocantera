@@ -3,196 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I.E. Enrique Olaya Herrera - Repositorio</title>
+    <title>Repositorio - I.E. Enrique Olaya Herrera</title>
     <style>
-        /* --- ESTILOS GENERALES (Adaptado a celular) --- */
+        /* --- ESTILOS GENERALES --- */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa; /* Fondo gris muy claro */
+            background-color: #f4f6f9; /* Fondo gris académico */
             color: #333;
         }
 
-        /* --- HEADER (El diseño oscuro con foto que elegiste) --- */
+        /* --- HEADER (Portada Institucional) --- */
         header {
-            /* Foto de fondo de montaña/atardecer similar a tu diseño */
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+            background: linear-gradient(rgba(30, 60, 114, 0.85), rgba(30, 60, 114, 0.95)), url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 40px 20px;
-            text-align: left;
-        }
-        header .institucion {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #f1c40f; /* Color dorado/amarillo para resaltar */
-            margin-bottom: 10px;
-            font-weight: bold;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 5px solid #f1c40f; /* Línea dorada institucional */
         }
         header h1 {
-            margin: 0;
-            font-size: 32px;
-            font-family: 'Georgia', serif; /* Letra elegante para el título */
+            margin: 0 0 10px 0;
+            font-size: 28px;
+            font-family: 'Georgia', serif;
             line-height: 1.2;
-            margin-bottom: 15px;
         }
         header p {
-            font-size: 15px;
+            font-size: 16px;
             margin: 0;
             opacity: 0.9;
-            max-width: 500px;
-            line-height: 1.4;
+            font-weight: 300;
         }
 
-        /* --- CONTENEDOR PRINCIPAL --- */
+        /* --- CONTENEDOR --- */
         .container {
             padding: 20px;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
         }
 
         /* --- BUSCADOR --- */
         .buscador {
             width: 100%;
-            padding: 12px 20px;
-            border-radius: 25px;
+            padding: 15px 20px;
+            border-radius: 8px;
             border: 1px solid #ddd;
-            font-size: 15px;
+            font-size: 16px;
             box-sizing: border-box;
             margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
-        /* --- FILTROS DE CATEGORÍAS --- */
+        /* --- FILTROS (Categorías solicitadas) --- */
         .filtros {
             display: flex;
             gap: 10px;
             overflow-x: auto;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            /* Oculta la barra de scroll en celular */
+            scrollbar-width: none; 
         }
+        .filtros::-webkit-scrollbar { display: none; }
+        
         .filtro-btn {
             background-color: white;
             border: 1px solid #ccc;
-            padding: 8px 16px;
-            border-radius: 20px;
+            padding: 10px 18px;
+            border-radius: 30px;
             font-size: 14px;
             color: #555;
             white-space: nowrap;
-            font-weight: 500;
+            font-weight: 600;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
         }
         .filtro-btn.activo {
-            background-color: #1e3c72; /* Azul oscuro */
+            background-color: #1e3c72;
             color: white;
             border-color: #1e3c72;
         }
 
-        /* --- TARJETAS DEL REPOSITORIO --- */
+        /* --- TARJETAS DE PUBLICACIÓN --- */
         .tarjeta {
             background-color: white;
-            border-radius: 15px;
+            border-radius: 12px;
             overflow: hidden;
             margin-bottom: 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            border: 1px solid #eee;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
         }
+        
+        /* Imagen de la tarjeta */
         .tarjeta img {
             width: 100%;
-            height: 200px;
+            height: 220px;
             object-fit: cover;
+            border-bottom: 1px solid #eee;
         }
+        
         .tarjeta-contenido {
             padding: 20px;
         }
+
+        /* Etiquetas de colores por categoría */
         .etiqueta {
-            background-color: #e1ecf4;
-            color: #1e3c72;
-            font-size: 12px;
-            font-weight: bold;
-            padding: 5px 10px;
-            border-radius: 5px;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 6px 12px;
+            border-radius: 4px;
             display: inline-block;
             margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
+        .tag-educacion { background-color: #e3f2fd; color: #1565c0; }
+        .tag-ciudad { background-color: #e8f5e9; color: #2e7d32; }
+        .tag-juventud { background-color: #fff3e0; color: #e65100; }
+        .tag-codigo { background-color: #f3e5f5; color: #6a1b9a; }
+        .tag-ensayo { background-color: #ffebee; color: #c62828; }
+
+        /* Título de la publicación */
         .tarjeta h2 {
             margin: 0 0 10px 0;
             font-size: 20px;
-            color: #222;
+            color: #111;
             line-height: 1.3;
+            font-family: 'Georgia', serif;
         }
+
+        /* Autor de la publicación */
         .autor {
-            font-size: 13px;
-            color: #888;
+            font-size: 14px;
+            color: #666;
             margin-bottom: 15px;
-            display: block;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
+        .autor img {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Resumen */
         .tarjeta p {
             font-size: 15px;
-            line-height: 1.5;
-            color: #555;
+            line-height: 1.6;
+            color: #444;
             margin-bottom: 20px;
         }
+
+        /* Botón de descarga/lectura */
         .btn-leer {
             display: block;
             text-align: center;
-            background-color: #f8f9fa;
-            color: #1e3c72;
+            background-color: #1e3c72;
+            color: white;
             text-decoration: none;
-            padding: 12px;
-            border-radius: 8px;
+            padding: 14px;
+            border-radius: 6px;
             font-weight: bold;
             font-size: 15px;
-            border: 1px solid #1e3c72;
+            transition: background 0.3s;
         }
     </style>
 </head>
 <body>
 
-    <!-- EL HEADER OSCURO CON FOTO -->
+    <!-- ENCABEZADO -->
     <header>
-        <div class="institucion">I.E. Enrique Olaya Herrera</div>
-        <h1>Comprometidos con la ciencia, la cultura y los derechos humanos.</h1>
-        <p>Repositorio oficial de logros, trayectorias e historias que inspiran a nuestra comunidad.</p>
+        <h1>Repositorio Académico<br>I.E. Enrique Olaya Herrera</h1>
+        <p>Comprometidos con la ciencia, la cultura y los derechos humanos.</p>
     </header>
 
     <div class="container">
         
-        <!-- BARRA DE BÚSQUEDA -->
-        <input type="text" class="buscador" placeholder="🔍 Buscar historias, personas o temas...">
+        <!-- BUSCADOR -->
+        <input type="text" class="buscador" placeholder="🔍 Buscar por título, autor o palabra clave...">
 
-        <!-- FILTROS -->
+        <!-- FILTROS (Adaptados a los temas que mencionaste) -->
         <div class="filtros">
             <div class="filtro-btn activo">Todos</div>
-            <div class="filtro-btn">Ciencia</div>
-            <div class="filtro-btn">Cultura</div>
-            <div class="filtro-btn">Derechos Humanos</div>
+            <div class="filtro-btn">Ensayos</div>
+            <div class="filtro-btn">Educación</div>
+            <div class="filtro-btn">Ciudad</div>
+            <div class="filtro-btn">Juventud</div>
+            <div class="filtro-btn">Código</div>
         </div>
 
-        <!-- TARJETA DE EJEMPLO (Puedes copiar y pegar este bloque para añadir más) -->
+        <!-- ========================================== -->
+        <!-- TARJETA 1: EJEMPLO DE ENSAYO -->
+        <!-- ========================================== -->
         <div class="tarjeta">
-            <!-- Foto de ejemplo -->
-            <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ciencia">
+            <img src="https://images.unsplash.com/photo-1455390582262-044cdead2708?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ensayo">
             <div class="tarjeta-contenido">
-                <span class="etiqueta">Ciencia</span>
-                <h2>Feria de Innovación: Proyecto de energías limpias</h2>
-                <span class="autor">Por: Estudiante de Grado 11 | Año: 2024</span>
-                <p>Nuestros estudiantes destacaron en la feria regional con un prototipo de panel solar casero, demostrando que la ciencia está al alcance de todos para cuidar el planeta.</p>
-                <a href="#" class="btn-leer">Leer historia completa</a>
+                <span class="etiqueta tag-ensayo">Ensayo</span>
+                <h2>El papel de la escuela en la construcción de paz</h2>
+                <span class="autor">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Profesor">
+                    Prof. Carlos Mendoza | Marzo 2024
+                </span>
+                <p>Una reflexión profunda sobre cómo las aulas se convierten en el primer territorio de reconciliación y diálogo para los jóvenes de nuestra ciudad.</p>
+                <a href="#" class="btn-leer">📄 Leer Ensayo Completo</a>
             </div>
         </div>
 
-        <!-- TARJETA DE EJEMPLO 2 -->
+        <!-- ========================================== -->
+        <!-- TARJETA 2: EJEMPLO DE CÓDIGO O TECNOLOGÍA -->
+        <!-- ========================================== -->
         <div class="tarjeta">
-            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cultura">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Código">
             <div class="tarjeta-contenido">
-                <span class="etiqueta" style="background-color: #fce8e6; color: #c5221f;">Cultura</span>
-                <h2>Festival de Talentos Olayistas</h2>
-                <span class="autor">Por: Semillero de Música | Año: 2023</span>
-                <p>Un espacio donde la música, el teatro y la danza se tomaron la institución, demostrando que la cultura es el motor para la sana convivencia y la expresión de nuestros jóvenes.</p>
-                <a href="#" class="btn-leer">Leer historia completa</a>
+                <span class="etiqueta tag-codigo">Código</span>
+                <h2>Introducción a la programación web para principiantes</h2>
+                <span class="autor">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Profesora">
+                    Prof. Laura Gómez | Febrero 2024
+                </span>
+                <p>Material de apoyo y guía práctica desarrollada para el semillero de tecnología, donde los estudiantes aprenden HTML y CSS desde cero.</p>
+                <a href="#" class="btn-leer">💻 Ver Publicación</a>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- TARJETA 3: EJEMPLO DE FOTO / CIUDAD -->
+        <!-- ========================================== -->
+        <div class="tarjeta">
+            <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ciudad">
+            <div class="tarjeta-contenido">
+                <span class="etiqueta tag-ciudad">Ciudad</span>
+                <h2>Galería Fotográfica: Los rostros de nuestro barrio</h2>
+                <span class="autor">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Profesor">
+                    Prof. Andrés Rivera | Noviembre 2023
+                </span>
+                <p>Un registro visual realizado por el área de sociales, documentando la historia, el comercio y las dinámicas de la comunidad que rodea al colegio.</p>
+                <a href="#" class="btn-leer">📸 Ver Galería</a>
             </div>
         </div>
 
